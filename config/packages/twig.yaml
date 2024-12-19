@@ -1,6 +1,12 @@
 twig:
     file_name_pattern: '*.twig'
 
+    # See https://docs.sonata-project.org/projects/SonataFormatterBundle/en/5.x/reference/installation/#configuration
+    debug:            '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+
+    form_themes:
+        - '@SonataFormatter/Form/formatter.html.twig'
 when@test:
     twig:
         strict_variables: true
